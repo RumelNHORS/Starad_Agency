@@ -1,0 +1,83 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Starad Agency</title>
+        {% include 'includes/stylesheets.html' %}
+        </head>
+    <body>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <div class="loader_bg">
+        <div class="loader"></div>
+    </div>
+
+    <nav class="navbar navbar-custom navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="/"> STERAD AGENCY<span>.</span> </a>
+            </div>
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a class="smooth-menu" href="#home">Home</a></li>
+                    <li><a class="smooth-menu" href="#about">About</a></li>
+                    <li><a class="smooth-menu" href="#services">Services</a></li>
+                    <li><a class="smooth-menu" href="#portfolio">Portfolio</a></li>
+                    <li><a class="smooth-menu" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    {% block content %}{% endblock %}
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#about">about us</a></li>
+                        <li><a href="#services">our services</a></li>
+                        <li><a href="#portfolio">our Portfolio</a></li>
+                        <li><a href="#contact">Contact US</a></li>
+                        {% comment %} <li><a href="#">privacy policy</a></li> {% endcomment %}
+                        <li><a href="{% static 'images/sample-privacy-policy-template.pdf' %}" target="_blank">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>office address</h4>
+                    <p class="office-address">
+                        Address:<br>
+                        House-19, Ground Floor, Road-05,<br>
+                        Nikanja-1, Dhaka-1229<br>
+                        Bangladesh
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- New row for copyright notice -->
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                    <p class="footer-copyright">&copy; 2024 Starad Agency. Designed and Developed by Starad Agency.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    {% include 'includes/scripts.html' %}
+    </body>
+</html>
